@@ -12,6 +12,33 @@ def encode(password):
 
 
 # TODO: Make decoder function
+#added by xiaolei huang
+def decode(encoded_password): #decodes on a char by char basis
+    decoded_password=""
+    for digit in encoded_password:
+        if digit== "0":
+            decoded_password+= "7"
+        elif digit== "1":
+            decoded_password+="8"
+        elif digit=="2":
+            decoded_password+= "9"
+        elif digit== "3":
+            decoded_password+="0"
+        elif digit=="4":
+            decoded_password+= "1"
+        elif digit== "5":
+            decoded_password+="2"
+        elif digit=="6":
+            decoded_password+= "3"
+        elif digit== "7":
+            decoded_password+="4"
+        elif digit=="8":
+            decoded_password+= "5"
+        elif digit== "9":
+            decoded_password+= "6"
+    print(f' The encoded password is {encoded_password}, and the original password is {decoded_password}.')
+    return decoded_password
+
 
 
 # The main() that contains the basic menu/options
@@ -37,15 +64,7 @@ def main():
 
         # option == 2 then print out the encoded and decoded password
         elif option == 2:
-            pass    # TODO: implement the decoder program and take out pass once implemented
-            """if encoded_password is None:
-                print("No encoded password found. Please encode a password first.")
-                print()
-            else:
-                decoded_password = decode(encoded_password)
-                print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
-                print()
-            """
+            decode(encoded_password)
 
         # option == 3 then exit program
         elif option == 3:
