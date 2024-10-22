@@ -19,7 +19,6 @@ def main():
     encoded_password = None
 
     while True:
-        print()
         print("Menu")
         print("-------------")
         print("1. Encode")
@@ -34,15 +33,18 @@ def main():
             password = input("Please enter your password to encode: ")
             encoded_password = encode(password)
             print("Your password has been encoded and stored!")
+            print()
 
         # option == 2 then print out the encoded and decoded password
         elif option == 2:
-            pass    # TODO: implement the decoder program
+            pass    # TODO: implement the decoder program and take out pass once implemented
             """if encoded_password is None:
                 print("No encoded password found. Please encode a password first.")
+                print()
             else:
                 decoded_password = decode(encoded_password)
                 print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
+                print()
             """
 
         # option == 3 then exit program
@@ -52,6 +54,7 @@ def main():
         # If invalid option inputted then print out "Invalid option, please try again."
         else:
             print("Invalid option, please try again.")
+            print()
 
 if __name__ == "__main__":
     # Runs main function
